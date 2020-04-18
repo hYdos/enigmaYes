@@ -1,0 +1,70 @@
+.class {
+  font-family: Consolas,monaco,monospace;
+}
+
+.classesBox {
+  position:absolute;
+  top:55px;
+  left: 0;
+  height:10px;
+  width: 300px;
+  z-index:-1;
+}
+
+.theme {
+  background-color: #262626;
+  color: aliceblue;
+}
+
+.themeText {
+  color: aliceblue;
+}
+
+.classesBoxTheme {
+  background-color: #333333;
+  color: aliceblue;
+  width: 155px;
+}
+
+.classesBoxTheme.active {
+  color: #ffffff;
+  background-color: #070707;
+  border-color: #070707;
+}
+
+.codeView {
+  position: absolute;
+  top: 180px;
+  left: 150px;
+  width: 80vw;
+}
+
+.classesBackground {
+  background-color: #333333;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  height: 94vh;
+  overflow:hidden;
+  z-index:-10;
+  width: 140px;
+}
+
+html{
+  min-height:100%;/* make sure it is at least as tall as the viewport */
+  position:relative;
+}
+body{
+  height:100%; /* force the BODY element to match the height of the HTML element */
+}
+html {
+  --scrollbarBG: #CFD8DC;
+  --thumbBG: #90A4AE;
+}
+
+.scroller {
+  overflow-x: scroll;
+  scrollbar-color: rebeccapurple green;
+}
