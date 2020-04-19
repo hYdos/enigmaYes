@@ -9,12 +9,34 @@ function addObfClass(clazz) {
   e.setAttribute("aria-controls", clazz);
   obfClassDiv.appendChild(e);
 }
-function addDeobfClass() {
 
+function addDeobfClassPkg(classPackage, classNames) {
+  let divElement = document.createElement("div");
+  divElement.classList.add("btn-group", "deobfuscatedClassSpacer");
+
+  let dropdownTitleElement = document.createElement("button");
+  dropdownTitleElement.classList.add("btn", "btn-secondary", "btn-sm", "dropdown-toggle");
+  dropdownTitleElement.setAttribute("data-toggle", "dropdown");
+  dropdownTitleElement.setAttribute("aria-haspopup", "true");
+  dropdownTitleElement.setAttribute("aria-expanded", "false");
+  dropdownTitleElement.innerText = classPackage;
+
+  let classesDiv  = document.createElement("div");
+  classesDiv.classList.add("dropdown-menu", "dropdown-menu-right");
+
+  for(const className of classNames){
+    let classElement = document.createElement("button");
+    classElement.classList.add("dropdown-item");
+    classElement.setAttribute("type", "button");
+    classElement.innerText = className;
+    classesDiv.appendChild(classElement);
+  }
+
+  divElement.appendChild(dropdownTitleElement);
+  divElement.appendChild(classesDiv);
+  document.getElementById("deobfuscatedClasses").appendChild(divElement);
 }
-function removeObfClass() {
 
-}
-function removeObfClass() {
-
+function removeClass(id) {
+  $("#" + id).hide();
 }
