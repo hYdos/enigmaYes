@@ -45,8 +45,8 @@
 
 .codeView {
   position: absolute;
-  top: 180px;
-  left: 150px;
+  top: 280px;
+  left: 75px;
   width: 80vw;
 }
 
@@ -78,4 +78,12 @@ html {
 .scroller {
   overflow-x: scroll;
   scrollbar-color: rebeccapurple green;
+}
+
+.deobfuscatedClassesList {
+  max-height: 53vh;
+}
+
+.obfuscatedClassList {
+  max-height: 40vh;
 }

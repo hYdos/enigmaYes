@@ -16,4 +16,5 @@ function addClasses(deobfuscatedClasses, obfuscatedClasses) {
   }
 
   addDeobfClassPkg("net.minecraft.util", ["ChatUtil", "Commonl18n", "DyeColor", "Formatting", "IdList", "Identifier"]);
+  addDeobfClassPkg("net.minecraft.util", ["ChatUtil", "Commonl18n", "DyeColor", "Formatting", "IdList", "Identifier"]);
 }
