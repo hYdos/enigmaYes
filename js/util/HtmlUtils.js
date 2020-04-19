@@ -1,3 +1,6 @@
+const obfClassDiv = document.getElementById("obfuscatedClasses");
+const classCodeDiv = document.getElementById("codeView")
+
 function addObfClass(clazz) {
   let e = document.createElement("div");
   e.classList.add("classesBoxTheme", "list-group-item", "list-group-item-action");
@@ -8,6 +11,17 @@ function addObfClass(clazz) {
   e.setAttribute("role", "tab");
   e.setAttribute("aria-controls", clazz);
   obfClassDiv.appendChild(e);
+}
+
+function addObfClassCode(name, code) {
+  let codeContent = document.createElement("div");
+  codeContent.textContent = code;
+  codeContent.setAttribute("role", "tabpanel");
+  codeContent.classList.add("tab-pane", "fade");
+  codeContent.id = name + "-code";
+  codeContent.setAttribute("aria-labelledby", name);
+  classCodeDiv.appendChild(codeContent);
+
 }
 
 function addDeobfClassPkg(classPackage, classNames) {
@@ -21,10 +35,10 @@ function addDeobfClassPkg(classPackage, classNames) {
   dropdownTitleElement.setAttribute("aria-expanded", "false");
   dropdownTitleElement.innerText = classPackage;
 
-  let classesDiv  = document.createElement("div");
+  let classesDiv = document.createElement("div");
   classesDiv.classList.add("dropdown-menu", "dropdown-menu-right");
 
-  for(const className of classNames){
+  for (const className of classNames) {
     let classElement = document.createElement("button");
     classElement.classList.add("dropdown-item");
     classElement.setAttribute("type", "button");
