@@ -25,6 +25,10 @@
   color: aliceblue;
 }
 
+.deobfuscatedClassSpacer {
+  left: 10px;
+}
+
 .classesBoxTheme {
   background-color: #333333;
   color: aliceblue;
