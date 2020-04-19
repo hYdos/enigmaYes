@@ -3,9 +3,10 @@ const socket = new WebSocket("localhost:34095")
 let debugConnection = false;
 
 socket.onopen = function (event) {
+  $("#connectionalert").show()
   const msg = {
-    username: "e",
-    password: "f",
+    username: "user",
+    password: "pass",
   };
 
   socket.send(JSON.stringify(msg));

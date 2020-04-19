@@ -9,6 +9,7 @@
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
           integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
           crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="main.css">
@@ -40,20 +41,38 @@
   </div>
 </nav>
 
-<div class="classesBox">
-  <a class="text-left themeText">Obfuscated Classes</a>
-  <div class="row">
-    <div class="classesBoxTheme">
-      <div class="classesBackground"></div>
+<div class="alert alert-success alert-dismissible fade show" id="connectionalert" role="alert">
+  <strong>Connected!</strong> It may take a bit of time for classes to load
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+
+<div class="classesBox" id="classBox">
+  <a class="text-left themeTextSmall">Obfuscated Classes</a>
+  <div class="row classesBoxTheme">
+      <a class="classesBackground"></a>
       <div class="classesBoxTheme list-group" id="obfuscatedClasses" role="tablist">
+      </div>
+  </div>
+  <a class="text-left themeTextSmall">Deobfuscated Classes</a>
+  <div class="row classesBoxTheme">
+    <div class="btn-group">
+      <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        net/minecraft/client
+      </button>
+      <div class="dropdown-menu dropdown-menu-right">
+        <button class="dropdown-item" type="button">Action</button>
+        <button class="dropdown-item" type="button">Another action</button>
+        <button class="dropdown-item" type="button">Something else here</button>
       </div>
     </div>
   </div>
 
-
   <div class="codeView">
     <div class="tab-content" id="nav-tabContent">
-      <pre class="themeText scroller" id="codeView">
+      <pre class="themeTextSmall scroller" id="codeView">
 <!--        <a>This test shows that </a><a href="#" class="badge badge-danger">highlighting</a><a> works in enigma online we could really use an </a><a href="#" class="badge badge-danger">icon</a><a>for this page. </a><a>This test shows that </a><a href="#" class="badge badge-success">highlighting</a><a> works in enigma online we could really use an </a><a href="#" class="badge badge-success">icon</a><a>for this page. </a><a>This test shows that </a><a href="#" class="badge badge-success">highlighting</a><a> works in enigma online we could really use an </a><a href="#" class="badge badge-success">icon</a><a>for this page. </a>-->
       </pre>
     </div>

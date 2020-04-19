@@ -16,6 +16,11 @@
   color: aliceblue;
 }
 
+.themeTextSmall {
+  color: aliceblue;
+  font-size: 90%;
+}
+
 .themeText {
   color: aliceblue;
 }
@@ -23,7 +28,7 @@
 .classesBoxTheme {
   background-color: #333333;
   color: aliceblue;
-  width: 155px;
+  width: 165px;
 }
 
 .classesBoxTheme.active {
@@ -49,7 +54,7 @@
   height: 94vh;
   overflow:hidden;
   z-index:-10;
-  width: 140px;
+  width: 150px;
 }
 
 html{
