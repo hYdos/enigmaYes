@@ -15,7 +15,7 @@ function addDeobfClassPkg(classPackage, classNames) {
   divElement.classList.add("btn-group", "deobfuscatedClassSpacer");
 
   let dropdownTitleElement = document.createElement("button");
-  dropdownTitleElement.classList.add("btn", "btn-secondary", "btn-sm", "dropdown-toggle");
+  dropdownTitleElement.classList.add("btn", "btn-secondary", "btn-sm", "dropdown-toggle", "themeTextSmall");
   dropdownTitleElement.setAttribute("data-toggle", "dropdown");
   dropdownTitleElement.setAttribute("aria-haspopup", "true");
   dropdownTitleElement.setAttribute("aria-expanded", "false");
@@ -36,6 +36,7 @@ function addDeobfClassPkg(classPackage, classNames) {
   divElement.appendChild(classesDiv);
   document.getElementById("deobfuscatedClasses").appendChild(divElement);
 }
+
 
 function removeClass(id) {
   $("#" + id).hide();

@@ -19,20 +19,10 @@ $("#connectionalert").hide()
 addClasses(obfClasses, obfClasses);
 
 
-function addClasses(obfuscatedClasses, deobfuscatedClasses) {
-  for(let clazz of deobfuscatedClasses){
+function addClasses(deobfuscatedClasses, obfuscatedClasses) {
+  for(let clazz of obfuscatedClasses){
     addObfClass(clazz);
   }
 
-  //set the class content
-  for(let className in obfClassesCode){
-    let classCode = obfClassesCode[className];
-    let codeContent = document.createElement("div");
-    codeContent.textContent = classCode;
-    codeContent.setAttribute("role", "tabpanel");
-    codeContent.classList.add("tab-pane", "fade");
-    codeContent.id = className + "-code";
-    codeContent.setAttribute("aria-labelledby", className);
-    classCodeDiv.appendChild(codeContent);
-  }
+  addDeobfClassPkg("net.minecraft.util", ["ChatUtil", "Commonl18n", "DyeColor", "Formatting", "IdList", "Identifier"]);
 }

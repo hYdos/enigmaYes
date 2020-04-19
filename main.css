@@ -26,7 +26,9 @@
 }
 
 .deobfuscatedClassSpacer {
-  left: 10px;
+  left: 6px;
+  font-size: 90%;
+  width: 160px;
 }
 
 .classesBoxTheme {
@@ -62,11 +64,11 @@
 }
 
 html{
-  min-height:100%;/* make sure it is at least as tall as the viewport */
+  min-height:100%;
   position:relative;
 }
 body{
-  height:100%; /* force the BODY element to match the height of the HTML element */
+  height:100%;
 }
 html {
   --scrollbarBG: #CFD8DC;
